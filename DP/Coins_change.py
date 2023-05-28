@@ -12,4 +12,5 @@ def getCoins(coins, n, sum):
     return dp[sum][n]
 
 if __name__ == "__main__":
+    
     print(getCoins([1,2,3],3,4))
