@@ -54,3 +54,9 @@ class Graph:
 
     def __str__(self):
         return str(self.adjMat)
+    
+class Edge:
+    def __init__(self,src,dst,wt):
+        self.src = src
+        self.dst = dst
+        self.wt = wt
