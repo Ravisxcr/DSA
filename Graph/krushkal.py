@@ -9,9 +9,9 @@ def krushkal(edges, nVertices):
     parent = [i for i in range(nVertices)]
     edges = sorted(edges, key = lambda edge:edge.wt)
     count = 0
-
     output = []
     i = 0
+    
     while count < (nVertices - 1):
         currentEdge = edges[i]
         srcParent = getParent(currentEdge.src, parent)
