@@ -1,19 +1,19 @@
 # Optimized solution
-class Solution:
-    def isValid(self, s: str) -> bool:
-        stack = []
-        match = { ")" : "(", "]" : "[", "}" : "{" }
 
-        for c in s:
-            if c in match:
-                if stack and stack[-1] == match[c]:
-                    stack.pop()
-                else:
-                    return False
+def isValid(s: str) -> bool:
+    stack = []
+    match = { ")" : "(", "]" : "[", "}" : "{" }
+
+    for c in s:
+        if c in match:
+            if stack and stack[-1] == match[c]:
+                stack.pop()
             else:
-                stack.append(c)
+                return False
+        else:
+            stack.append(c)
 
-        return True if not stack else False
+    return True if not stack else False
     
 # solutin 2
 
