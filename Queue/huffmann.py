@@ -164,7 +164,7 @@ class HuffmanCoding:
 
 if __name__ == '__main__':
 
-    path = 'new.txt'
+    path = 'Queue/new.txt'
     h = HuffmanCoding(path)
     output_path = h.compress()
     h.decompress(output_path)

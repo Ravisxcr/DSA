@@ -5,13 +5,10 @@ class Graph:
         self.nVertices = nVertices
         self.adjMat = [[0 for i in range(nVertices)] for j in range(nVertices)]
 
-    def addEdge(self,v1,v2):
-        self.adjMat[v1][v2] = 1
-        self.adjMat[v2][v1] = 1
-    
-    def addwtEdge(self,v1,v2,wt):
+    def addEdge(self,v1,v2,wt=1):
         self.adjMat[v1][v2] = wt
         self.adjMat[v2][v1] = wt
+    
 
     def containsEdge(self,v1,v2):
         return True if self.adjMat[v1][v2] > 0 else False
